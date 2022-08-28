@@ -18,8 +18,9 @@
             document.body.appendChild( renderer.domElement );
 
             const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+            const texture = new THREE.TextureLoader().load("./IMG_0082.jpg");
             const edges = new THREE.EdgesGeometry(geometry);
-            const material = new THREE.MeshBasicMaterial( { color: 0xFFF } );
+            const material = new THREE.MeshBasicMaterial( { map: texture } );
             const cube = new THREE.Mesh( geometry, material);
 
             const lines = new THREE.LineSegments(edges, new THREE.LineBasicMaterial( { color: 0xffffff } ));
