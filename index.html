@@ -15,6 +15,7 @@
 const mouse = new THREE.Vector2();
 const target = new THREE.Vector2();
 const windowHalf = new THREE.Vector2( window.innerWidth / 2, window.innerHeight / 2 );
+let collection = new Map();
 
 init();
 animate();
@@ -25,7 +26,6 @@ function init() {
     camera.position.z = 50;
 
     scene = new THREE.Scene();
-
     const geometry = new THREE.BoxBufferGeometry();
     const texture = new THREE.TextureLoader().load("./IMG_0082.jpg");
     const material = new THREE.MeshBasicMaterial({map: texture});
@@ -40,6 +40,7 @@ function init() {
       object.rotation.y = Math.random() * 2 * Math.PI;
       object.rotation.z = Math.random() * 2 * Math.PI;
       scene.add( object );
+      collection.add(i, object);
           
 		}
 
@@ -86,6 +87,12 @@ function animate() {
   
   camera.rotation.x += 0.05 * ( target.y - camera.rotation.x );
   camera.rotation.y += 0.05 * ( target.x - camera.rotation.y );
+
+  collection.forEach( (value, key) => {
+    value.rotation.x += 0.01;
+    value.rotation.y += 0.01;
+
+  });
 
   requestAnimationFrame( animate );
   renderer.render( scene, camera );
