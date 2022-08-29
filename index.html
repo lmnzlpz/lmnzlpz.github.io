@@ -27,7 +27,7 @@ function init() {
     scene = new THREE.Scene();
 
     const geometry = new THREE.BoxBufferGeometry();
-    const texture = new THREE.TextureLoader().load("./IMG_0082");
+    const texture = new THREE.TextureLoader().load("./IMG_0082.jpg");
     const material = new THREE.MeshNormalMaterial({map: texture});
     
     for ( let i = 0; i < 1000; i ++ ) {
