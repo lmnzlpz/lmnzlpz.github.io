@@ -16,7 +16,7 @@ function init() {
     scene = new THREE.Scene();
     const geometry = new THREE.BoxBufferGeometry();
     
-    const material = new THREE.MeshBasicMaterial("3f7b9d");
+    const material = new THREE.MeshBasicMaterial({color: 0xFF99CC});
 
     let geometryPlane = new THREE.PlaneGeometry(1,1,20,20);
     let planeTextture = new THREE.MeshBasicMaterial({color: 0xff0000});
