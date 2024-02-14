@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff80a0, #ffcccb); 
+}
+
+.container {
+    text-align: center;
+}
+
+.text{
+    opacity: 0;
+    font-size: 3em;
+    color: #ffffff; 
+}
+
+#name {
+    opacity: 0;
+    font-size: 3em;
+    color: #ffffff; 
+}
+
+#message{
+    opacity: 0;
+    font-size: 3em;
+    color: #ffffff; 
+}
+
+#iloveyou {
+    opacity: 0;
+    font-size: 3em;
+    color: #ffffff; 
+}
+
+
+.button{
+	width: 50px;
+	height: 50px;
+    top:70%;
+    position: fixed;
+	left: 50%;
+	margin-top: -45px;
+	margin-left: -50px;
+	border-radius: 5px;
+	background: none;
+	cursor: pointer;
+	transition: background 0.5s ease;
+}
+.button:hover{
+
+}
+.active#heart:before,.active#heart:after{
+	background: red !important;
+}
+#heart {
+    width: 100px;
+    height: 90px;
+    transition: background 0.5s ease;
+}
+#heart:before,
+#heart:after {
+	transition: background 0.5s ease;
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: dimgrey;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin :100% 100%;
+}
