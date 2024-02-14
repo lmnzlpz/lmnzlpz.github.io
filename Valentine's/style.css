@@ -22,6 +22,7 @@ body {
     opacity: 0;
     font-size: 3em;
     color: #ffffff; 
+    cursor: pointer;
 }
 
 #message{
@@ -34,6 +35,7 @@ body {
     opacity: 0;
     font-size: 3em;
     color: #ffffff; 
+    cursor: pointer;
 }
 
 
@@ -80,3 +82,4 @@ body {
     transform: rotate(45deg);
     transform-origin :100% 100%;
 }
+

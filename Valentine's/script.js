@@ -14,7 +14,7 @@ function fadeIn() {
         thirdInterValID = setInterval(showMessage,100);
         setTimeout(function(){
             secIntervalID = setInterval(showIloveYou, 100);
-        }, 5000);
+        }, 6000);
         
     }
 
